@@ -4,17 +4,21 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>-</title>
+    <title>Accessiblity Remediation Demo</title>
   </head>
   <body>
     <header>
-      <a href="https://reaktiv.co">
-        <img src="./images/rkv-logo.png" />
+      <a href="https://reaktiv.co" aria-label="Reaktiv homepage">
+        <img
+          src="./images/rkv-logo.png"
+          alt="Reaktiv logo: a yellow light bulb with the text Reaktiv Studios"
+        />
       </a>
       <h1>Accessiblity Remediation Demo</h1>
     </header>
     <main>
-      <table>
+      <h2>Step-by-step guide</h2>
+      <table role="presentation">
         <tbody>
           <tr>
             <td>
@@ -29,7 +33,9 @@
             </td>
           </tr>
           <tr>
-            <td class="h3 ordinal">Steps to remediation</td>
+            <td>
+              <h3 class="h3 ordinal">Steps to remediation></h3>
+            </td>
             <td>
               <ul>
                 <li>Identify and understand the the objective</li>
@@ -41,21 +47,36 @@
           </tr>
           <tr>
             <td>
-              <h2 class="ordinal">Form to nowhere</h2>
+              <h3 class="ordinal">Form to nowhere</h3>
             </td>
             <td>
               <form>
-                <p>This form submits to no where. In reality this is not a good thing, but for this exercise let's pretend it does.</p>
+                <p>
+                  This form submits to no where. In reality this is not a good
+                  thing, but for this exercise let's pretend it does.
+                </p>
                 <fieldset>
                   <legend>Name</legend>
                   <div class="d-flex">
+                    <label for="fname">First:</label>
                     <input placeholder="First" name="fname" id="fname" />
+                    <label for="lname">Last:</label>
                     <input placeholder="Last" name="lname" id="lname" />
                   </div>
                 </fieldset>
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="name@example.com" />
-                <input type="submit" value="Submit" tabindex="1" />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="name@example.com"
+                />
+                <input
+                  type="submit"
+                  value="Submit"
+                  role="button"
+                  aria-pressed="true"
+                />
               </form>
             </td>
           </tr>
