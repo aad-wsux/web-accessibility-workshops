@@ -59,7 +59,6 @@ table {
 .ordinal::before {
   display: inline;
   counter-increment: table-counter;
-  content: counter(table-counter) ': ';
 }
 
 fieldset {
